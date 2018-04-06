@@ -7,7 +7,7 @@ const create = async (req, res) => {
     name: 'Aftership Challenger',
     subject: 'test',
     to: '4leolei@gmail.com',
-    text: 'testing mailgun'
+    text: 'testing mailgun',
   })
 
   if (succeeded) {

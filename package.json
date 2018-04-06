@@ -23,6 +23,9 @@
   "homepage": "https://github.com/leoskyrocker/aftership-email-api-server#readme",
   "dependencies": {
     "@leoskyrocker/aftership-reliable-emailer": "1.0.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-register": "^6.26.0",
     "body-parser": "^1.18.2",
     "bunyan": "^1.8.12",
     "dotenv": "^5.0.1",
@@ -30,9 +33,6 @@
     "express-bunyan-logger": "^1.3.3"
   },
   "devDependencies": {
-    "babel-polyfill": "^6.26.0",
-    "babel-preset-env": "^1.6.1",
-    "babel-register": "^6.26.0",
     "eslint": "^4.19.1",
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-plugin-import": "^2.10.0"
