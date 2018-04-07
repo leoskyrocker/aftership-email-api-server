@@ -63,4 +63,21 @@ describe('# Email Controller', () => {
     expect(res.statusCode).to.equal(400)
     expect(JSON.parse(res._getData()).error).to.match(/message.*required/i)
   })
+
+  it('returns 500 when email fails to send', async () => {
+    const {req, res} = httpMocks.createMocks({
+      method: 'POST',
+      url: '/emails',
+      body: {
+        subject: 'abc',
+        to_address: 'abc@gmail.com',
+        message: 'Hey there!',
+      },
+    })
+    global.ReliableMailer = {send: () => null}
+    const sendResult = new Promise(resolve => resolve({succeeded: false}))
+    sinon.stub(global.ReliableMailer, 'send').returns(sendResult)
+    await emailController.create(req, res)
+    expect(res.statusCode).to.equal(500)
+  })
 })
