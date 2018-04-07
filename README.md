@@ -83,3 +83,10 @@ One can simply add a new email service class that abstracts the interaction with
 Currently, we are transpiling es6 in production environment in runtime. This has some performance hit, but is unnoticeable for our simple API.
 
 We should move away from this in the future if this API becomes more performance critical or grows larger, and change it to transpile before starting the server. Here's [one way](https://github.com/babel/example-node-server#getting-ready-for-production-use) to do it.
+
+##### More endpoints (backed by DB)
+Provide other endpoints, including GET /emails (backed by DB), so that user can see what emails they have already sent out. We'll have to update our POST /emails to actually store the sent emails in a database.
+
+##### Introduce API Versioning
+
+A public API service should always be versioned so that users who rely on it doesn't encounter breaking changes when we make incompatible API change in the future.
