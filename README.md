@@ -1,5 +1,6 @@
 Aftership Email API Server
 =========
+[![Build Status](https://travis-ci.com/leoskyrocker/aftership-email-api-server.svg?token=yX2wHppsYTF4kzifxutq&branch=master)](https://travis-ci.com/leoskyrocker/aftership-email-api-server)
 
 A Email Service API that reliably sends email using available email services. Supported services include Sendgrid and Mailgun.
 
